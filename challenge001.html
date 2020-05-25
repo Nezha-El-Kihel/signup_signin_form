@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenge#001</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="challenge001.css">
+</head>
+<body>
+	<!-- signup -->
+	<form method="POST" class="box" id="signup_form">
+		<h1>Signup</h1>
+		<!-- username -->
+		<div class="inputBox">
+			<input type="text" name="user_name" autocomplete="off" placeholder="" onkeyup="validName()" id="username" required>
+			<label>Your name</label>
+		</div>
+		<!-- email -->
+		<div class="inputBox mail_form">
+			<input type="text" name="user_email" autocomplete="off" placeholder="" onkeyup="validEmail()" id="useremail" required>
+			<label id="mail">E-mail adresse</label>
+			<span class="yesNo">
+				<i id="warning" class="fa fa-warning"></i>
+				<i id="check" class="fa fa-check"></i>
+			</span>
+		</div>
+		<!-- password -->
+		<div class="inputBox">
+			<input type="password" name="user_pass" placeholder="" onkeyup="validPassword()" id="userpassword" required>
+			<label>Password</label>
+		</div>
+		<!-- for show or hide password -->
+		<span class="eye" onclick="show_hide_password_signup()">
+			<i id="hide_signup" class="fa fa-eye-slash"></i>
+			<i id="show_signup" class="fa fa-eye"></i>
+		</span>
+		<div class="small">
+			<label>Select Your Gender: 
+				<label><input type="radio" name="user_gender" id="usermale" value="male" required>Male</label>
+				<label><input type="radio" name="user_gender" id="userfemale" value="Female" required>Female</label>
+			</label>
+		</div>
+		<div class="small">
+			<label class="accept_terms">
+				<input type="checkbox" id="userterms" required>I accept the <a href="termsOfUse.html">Terms of use</a> &amp; <a href="privacy_policy.html">Privacy Policy</a>
+			</label>
+		</div>
+		<input type="submit" name="submit" class="submit">
+		<div class="small">Already have an account? <a onclick="loginPage()">Login here</a></div>
+	</form>
+	<!-- login -->
+	<form method="POST" class="box" id="login_form">
+		<h1>Login</h1>
+		<div class="inputBox">
+			<input type="text" name="user_name" autocomplete="off" placeholder="" id="username" required>
+			<label>Your name</label>
+		</div>
+		<div class="inputBox">
+			<input type="password" name="password" placeholder="" id="password" onkeyup="icon_password_login()" required>
+			<label>Password</label>
+		</div>
+		<!-- for show or hide password -->
+		<span class="eye" onclick="show_hide_password_login()">
+			<i id="hide_login" class="fa fa-eye-slash"></i>
+			<i id="show_login" class="fa fa-eye"></i>
+		</span>
+		<div class="small">Forget password? <a href="forget_password.html">Click here</a></div>
+		<input type="submit" name="submit" class="submit">
+		<div class="small">Don't have an account? <a onclick="signupPage()">Create one</a></div>		
+	</form>
+	<script type="text/javascript" src="challenge001.js"></script>
+</body>
+</html>
