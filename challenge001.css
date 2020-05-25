@@ -139,7 +139,7 @@ a:hover{
 	color: #D98324;
 }
 /*  */
-@media (max-width: 300px){
+@media (max-width: 400px){
 	.box{
 		width: 100%;
 		height: 100%;
