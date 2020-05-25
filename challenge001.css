@@ -138,3 +138,16 @@ a:hover{
 .small label label{
 	color: #D98324;
 }
+/*  */
+@media (max-width: 300px){
+	.box{
+		width: 100%;
+		height: 100%;
+	}
+	.eye #hide_signup ,.eye #show_signup{
+		top: 43.5%;
+	}
+	.eye #hide_login ,.eye #show_login{
+		top: 32%;
+	}
+}
