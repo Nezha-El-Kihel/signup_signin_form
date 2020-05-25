@@ -1,0 +1,152 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Monospace" sans-serif;
+	height: 100vh;
+	user-select: none;
+	color: white;
+	background-image: url("welcom.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+}
+#login_form, #hide_login, #show_login ,#hide_signup , #show_signup,
+#warning, #check{
+	display: none;
+}
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, .9);
+	width: 400px;
+	padding: 30px;
+	box-sizing: border-box;	
+	text-align: center;
+	background-color: #3f0d12;
+	background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+	box-shadow: 4px 4px 6px #000
+}
+.inputBox{
+	position: relative;
+}
+.inputBox input{
+	width: 90%;
+	padding: 10px 0;
+	font-size: 16px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 20px;
+	color: #fff;
+}
+.inputBox label{
+	position: absolute;
+	top: 0;
+	left: 5%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+.inputBox input:focus ~label, .inputBox input:valid ~label{
+	top: -18px;
+	left: 5%;
+	color: #D98324;
+	font-size: 12px;
+}
+.submit{
+	cursor: pointer;
+	background: transparent;
+	color: #fff;
+	/*border: 2px solid white;*/
+	border: none;
+	display: block;
+	margin: 20px auto;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	background-color: #42378f;
+	background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+
+}
+.submit:hover{
+	color: white;
+	border: none;
+	transition: .5s;
+	background-color: #a40606;
+	background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+	
+}
+h1{
+	color: #3f0d12;
+	text-transform: uppercase;
+}
+/* label */
+.small{
+	padding: 5px;
+	font-size: 16px;
+}
+/* link */
+a{
+	text-decoration: none;
+	color: #FC575E;
+}
+a:hover{
+	text-decoration: underline;
+	color: #F7B42C;
+}
+/* validate email or not */
+.yesNo{
+	position: absolute;
+}
+.yesNo .fa{
+	position: absolute;
+	padding: 10px 0;
+	right: 5%;
+	color: #fff;
+}
+#warning{
+	color: red;
+}
+#check{
+	color: green;
+}
+#warning, #check{
+	display: none;
+}
+/* showing or hide password*/
+.eye #hide_signup ,.eye #show_signup{
+	position: absolute;
+	color: #fff;
+	padding: 14px 10px;
+	top: 45%;
+	right: 10%;
+}
+.eye #hide_login ,.eye #show_login{
+	position: absolute;
+	color: #fff;
+	padding: 14px 10px;
+	top: 42%;
+	right: 10%;
+}
+/* for Male and Female */
+.small label label{
+	color: #D98324;
+}
+@media (max-width: 500px){
+	.box{
+		width: 100%;
+		height: 100%;
+	}
+	.eye #hide_signup ,.eye #show_signup{
+		top: 43.5%;
+	}
+	.eye #hide_login ,.eye #show_login{
+		top: 32%;
+	}
+}
